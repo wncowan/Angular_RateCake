@@ -1,0 +1,26 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:left" class="second-border">
+    <h1>{{ title }}</h1>
+    <h4>Submit a dessert to be rated</h4>
+    <hr>
+    <form (submit) ="onCreateDessertClick()">
+      <p>Dessert Chef:</p>
+      <input type="text" name = "newDessert.name" [(ngModel)] = "newDessert.name" />
+      <p>Image url:</p>
+      <input type="text" name = "newDessert.image" [(ngModel)] = "newDessert.image" />
+      <p><input type="submit" value="SUBMIT"/></p>
+    </form>
+</div>
+<div *ngFor ="let dessert of displayDesserts">
+  <app-desserts [showDessert] ="dessert" (myEvent) = "onGetOneRatingClick($event)"></app-desserts>
+</div>
+<app-ratingdetails *ngIf ="oneRatings"></app-ratingdetails>
+<div *ngIf = "oneRatings" class="second-border">
+  <div style="text-align:center">
+      <h4>Baked by: {{oneRatings.name}}</h4>
+      <img src="{{oneRatings.image}}" style="height:250px" style="width:250px">
+      <p *ngFor="let rating of oneRatings.reviews"> {{ rating.rating }} - {{rating.comment}}</p>
+  </div>
+</div>
+
+

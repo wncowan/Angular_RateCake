@@ -1,0 +1,14 @@
+<div style="text-align:left" class="second-border">
+ <img (click)="onGetOneRatingClick(showDessert._id)" src="{{showDessert.image}}" style="height:250px" style="width:250px">
+  <form (submit)="onCreateCommentClick(showDessert._id)">
+    <p><select name="newComment.rating" [(ngModel)] ="newComment.rating">
+          <option value="5">5 Stars</option>
+          <option value="4">4 Stars</option>
+          <option value="3">3 Stars</option>
+          <option value ="2">2 Stars</option>
+      </select></p>
+      <input type="text" name = "newComment.comment" [(ngModel)] ="newComment.comment" />
+      <p><input type="submit" value="SUBMIT"/></p>
+  </form>
+</div>
+

@@ -1,0 +1,12 @@
+<div style="text-align:left" class="second-border">
+  <h1>{{ title }}</h1>
+  <h4>Submit a dessert to be rated</h4>
+  <hr>
+  <form>
+    <p>Dessert Chef:</p>
+    <input type="text" name="" class="FormPost"/>
+    <p>Image url:</p>
+    <input type="text" name="" class="FormPost"/>
+    <p><input type="submit"/></p>
+  </form>
+</div>
