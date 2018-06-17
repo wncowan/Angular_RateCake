@@ -39,6 +39,7 @@ getDessertFromService() {
 
 onGetOneRatingClick(id){
   console.log("I am in the dessertcomponent.ts")
+  console.log(id)
   let ratingObservable = this._httpService.getRatings(id)
   ratingObservable.subscribe(data => {
     console.log("Grab one ratings", data);
